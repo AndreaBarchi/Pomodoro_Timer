@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(35, 35, 84);
+}
+
+.timer_box {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    border-radius: 10px;
+    border: solid 1px rgb(126, 126, 126);
+    top: 50%;
+    width: 50%;
+    height: 80%;
+    min-width: 470px;
+    min-height: 655px;
+    transform: translate(0, -50%);
+    color: rgb(228, 228, 228);
+    background-color: rgb(8, 8, 41);
+}
+
+.timer_box button, .timer_box p {
+    margin: 15px;
+}
+
+.timer_box p {
+    font-size: 15rem;
+    text-align: center;
+}
+
+.timer_box button {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    width: 15rem;
+    height: 15rem;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 50%;
+    color: rgb(228, 228, 228);
+    background-color: rgb(19, 19, 64);
+}
+
+.timer_box button:hover {
+    cursor: pointer;
+    background-color: rgb(28, 28, 91);
+}
+
+.timer_box #pomodoro_counter {
+    font-size: 2rem;
+}
+
+.timer_time {
+    display: flex;
+}
+
+.timer_time p {
+    font-size: 10rem;
+}
+
+.switch_modes {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    user-select: none;
+}
+
+.switch_modes a {
+    padding: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) and (max-height: 950px){
+    .timer_box {
+        min-width: 0px;
+        min-height: 0px;
+        width: 300px;
+        height: 600px;
+    }
+
+    .switch_modes {
+        font-size: 1.5rem;
+    }
+
+    .timer_time p {
+        font-size: 4rem;
+    }
+
+    .timer_box button {
+        width: 10rem;
+        height: 10rem;
+        margin-top: 75px;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 300px) and (max-height: 700px){
+    .timer_box {
+        min-width: 0px;
+        min-height: 0px;
+        width: 270px;
+        height: 600px;
+    }
+}
+

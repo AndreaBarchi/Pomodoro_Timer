@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="main.js"></script>
+    <title>Pomodoro timer</title>
+</head>
+<body>
+    <audio id="alarmAudio">
+        <source src="./audio/alarm.mp3" type="audio/mpeg">
+    </audio>
+    <div class="timer_box">
+        <p id="pomodoro_counter">0 🍅</p>
+        <div class="switch_modes">
+            <h4 id="mode_label">Mode: Focus time</h4>
+            <a id="switch_modes" onclick="changeMode()">🔃</a>
+        </div>
+        <div class="timer_time">
+            <p id="timer_minutes" contenteditable="true" onclick="selectAll('minutes')">00</p>
+            <p>:</p>
+            <p id="timer_seconds" onclick="selectAll('seconds')">00</p>
+        </div>
+        <button id="timer_start" onclick="timerHandler()">Start</button>
+    </div>
+</body>
+</html>
