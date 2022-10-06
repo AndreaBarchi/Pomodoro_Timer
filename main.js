@@ -140,11 +140,14 @@ function getRemainingTime(endTime) {
 }
 
 function startTimer(mode, timeInSeconds) {
+    if(timerRunning){
+        return;
+    }
+    timerRunning = true;
     changeModeButton.style.display = "none";
     startButton.innerText = "Reset";
     let endTime = Date.parse(new Date()) + timeInSeconds * 1000;
     interval = setInterval(() => {
-        timerRunning = true;
         remainingTimeInSeconds = timerMinutes.textContent * 60 + Number.parseInt(timerSeconds.textContent);
         remainingTimeInSeconds = getRemainingTime(endTime);
         let minutes = Number.parseInt((remainingTimeInSeconds / 60) % 60, 10);
@@ -211,11 +214,11 @@ function timerHandler() {
         }
     }
     else{
+        timerMode = "stopped";
         changeModeButton.style.display = "block";
         clearInterval(interval);
         timerRunning = false;
         changeMode("focus");
-        timerMode = "stopped";
         startButton.innerText = "Start";
         timerMinutes.textContent = focusMinutes;
         timerSeconds.textContent = "00";
