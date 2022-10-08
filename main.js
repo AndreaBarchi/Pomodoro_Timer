@@ -63,7 +63,7 @@ function changeMode(mode){
     if(mode){
         switch(mode){
             case "focus":
-                modeLabel.textContent = "Mode: Focus";
+                modeLabel.textContent = "Mode: Focus time";
                 startButton.innerHTML = "Start focusing!";
                 break;
             case "shortb":
